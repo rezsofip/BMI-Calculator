@@ -1,0 +1,39 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TableView?>
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="top_left">
+    <VBox spacing="10">
+        <GridPane.margin>
+            <Insets top="10.0" left="10.0"/>
+        </GridPane.margin>
+        <HBox spacing="10">
+            <Label text="Tömeg (kg)" maxWidth="70"/>
+            <TextField fx:id="weightTextField" maxWidth="40"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Magasság (cm)" maxWidth="90"/>
+            <TextField fx:id="heightTextField" maxWidth="40"/>
+        </HBox>
+        <VBox spacing="10">
+            <Button text="BMI számítás" onMouseClicked="#setResultField"/>
+            <Label fx:id="result"/>
+        </VBox>
+        <VBox spacing="10">
+            <Button text="Normális testsúlytartomány számítása magasság alapján" onMouseClicked="#showNormalWeightInterval"/>
+            <Label fx:id="normalWeightResult"/>
+        </VBox>
+        <HBox spacing="10">
+            <TableView fx:id="descriptionTableView" editable="false"/>
+        </HBox>
+    </VBox>
+</GridPane>
+
+
